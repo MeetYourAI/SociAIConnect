@@ -1,2 +1,3 @@
-# AIProperty
-Testing a new template prototype for SmartLet
+# Community Ai 
+Team: Anaïs and Rahmlad
+Product Requirements Documentation: TBC
