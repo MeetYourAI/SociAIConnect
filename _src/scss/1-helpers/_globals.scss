@@ -78,7 +78,7 @@ body {
   //the direction definedleft OR right according to the dirction captured from the config-file used in top of the RTL-main.scss OR RTL-main.scss
   text-align: $start-direction;
   position: relative;
-  color: $clr-dark-blue;
+  color: $clr-semi-dark-blue;
   background: $clr-white;
   overflow-x: hidden;
   scroll-behavior: unset;
@@ -332,7 +332,7 @@ $g-colors: red, blue, green;
 }
 
 .has-dark-bg {
-  background-color: $clr-dark-blue;
+  background-color: $clr-black;
   .sec-heading {
     .title,
     .subtitle {
@@ -635,8 +635,8 @@ $g-colors: red, blue, green;
 
 * {
   &::selection {
-    background: $clr-main;
-    color: $clr-white;
+    background: $clr-White;
+    color: $clr-Black;
   }
 }
 
