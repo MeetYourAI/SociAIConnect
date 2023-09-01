@@ -1,8 +1,8 @@
-**Title**: ChatGpt Weaknesses on social media
-**Published On**: 09/01/2023
-**Author**: John Eme
-**Revision**: Anais
-**Topics**: Artificial Intelligence, Technology, AI, Social Media Community
+- **Title**: ChatGpt Weaknesses on social media
+- **Published On**: 09/01/2023
+- **Author**: John Eme
+- **Revision**: Anais
+- **Topics**: Artificial Intelligence, Technology, AI, Social Media Community
 
 ---
 # GPT's Weaknesses in Answering Social Media-Related Questions
