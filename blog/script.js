@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const blogPostsContainer = document.getElementById('blogPosts');
     const markdownFiles = [
       'chatgptWeakness20230828.md',
-      // Add other Markdown files here
+      // 'Social Media ChatGpt Limitations20230901.md',
     ];
   
     const getMetadata = (markdownText, field) => {
