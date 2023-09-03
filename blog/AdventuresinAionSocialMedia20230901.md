@@ -1,5 +1,5 @@
-- **Title**: Adventures in Ai and how it benefits Social Media
-- **Publiched on**: 09/01/2023
+- **Title**: Adventures in AI and how it benefits Social Media
+- **Published on**: 09/01/2023
 - **Author**: John Eme
 - **Revision**: Anais
 - **Topics**: Artificial Intelligence, Technology, AI, Social Media Community
