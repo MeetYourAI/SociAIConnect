@@ -5,8 +5,8 @@
 - **Target Release:** 16th of Sep 2023
 - **Document Status:** ONGOING
 - **Document Owner:** John Eme
-- **Product Engineer:** Anais Gilbert and Rahmlad Aramide
-- **Product Team:** Rahmlad Aramide, Anais Gilbert, and John Eme
+- **Product Engineer:** Anais Gilbert and John Eme
+- **Product Team:** John Eme and Anais Gilbert
 - **Product Owner:** Maurice Flynn
 
 ## Product Overview
