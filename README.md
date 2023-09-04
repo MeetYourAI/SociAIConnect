@@ -1,4 +1,4 @@
-# PRODUCT REQUIREMENT DOCUMENT FOR SociAI Connect
+# PRODUCT REQUIREMENT DOCUMENT FOR SOCIAI CONNECT
 
 - **Product Name:** SociAI Connect
 - **Product Type:** AI-Powered Social Media Tool
