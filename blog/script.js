@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       'ChatGptWeaknessonsocialmedia20230901.md',
         'AnswersofAIweaknesses20230901.md',
         'AdventuresinAionSocialMedia20230901.md',
-        'BestAIImageGeneratorForFree20230909',
+        'BestAIImageGeneratorForFree20230909.md',
       // Add other markdown files here
     ];
   
