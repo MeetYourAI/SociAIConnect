@@ -64,8 +64,8 @@
 			<!--Start navbar-->
 			<nav class="menu-navbar" id="main-nav">
 				<div class="header-logo"><a class="logo-link" href="#"><img class="logo-img light-logo" loading="lazy"
-							src="assets/images/logo/Black logo SociAI 1.png" alt="logo" /><img class="logo-img  dark-logo"
-							loading="lazy" src="assets/images/logo/Color logo SociAI 1.png" alt="logo" /></a></div>
+							src="assets/images/logo/Color logo SociAI 1.png" alt="logo" /><img class="logo-img  dark-logo"
+							loading="lazy" src="assets/images/logo/Black logo SociAI 1.png" alt="logo" /></a></div>
 				<div class="links menu-wrapper ">
 					<ul class="list-js links-list">
 						<li class="nav-item menu-item has-sub-menu"><a class="nav-link menu-link   active"
@@ -100,7 +100,7 @@
 	<!--End Page Header-->
 	<!-- Start  Page hero-->
 	<section class="page-hero  d-flex align-items-center" id="page-hero">
-		<div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/pattern-bg-1.jpg"
+		<div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/pattern-bg-5.jpg"
 			data-bg-opacity=".2"></div>
 		<div class="particles-js  dots" id="particles-js"></div>
 		<div class="container">
@@ -113,9 +113,6 @@
 								<h1 class="hero-title">Meet your AI <span class="featured-text"> Social Media Expert
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
 											preserveAspectRatio="none">
-											<path
-												d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7">
-											</path>
 										</svg> </span><span class="design-element rounded-shape stripes"></span></h1>
 							</div>
 
@@ -124,7 +121,7 @@
 									<div class="sc-wrapper dir-row sc-flat">
 										<p class="">Tell your friends</p>
 										<ul class="sc-list">
-											<li class="sc-item " title="Facebook"><a class="sc-link" href="#0"
+											<li class="sc-item " title="Facebook"><a class="sc-link" href="https://www.facebook.com/share/1H5x816C1b/"
 													title="social media icon"><i
 														class="fab fa-facebook-f sc-icon"></i></a></li>
 											<li class="sc-item " title="youtube"><a class="sc-link" href="#0"
@@ -133,8 +130,10 @@
 											<li class="sc-item " title="instagram"><a class="sc-link" href="#0"
 													title="social media icon"><i
 														class="fab fa-instagram sc-icon"></i></a></li>
-											<li class="sc-item " title="twitter"><a class="sc-link" href="#0"
-													title="social media icon"><i class="fab fa-twitter sc-icon"></i></a>
+											<li class="sc-item" title="X">
+												<a class="sc-link" href="https://x.com/yourprofile" title="social media icon">
+													<img src="assets/images/logo/X_logo.svg.png" alt="X" class="sc-icon"> 
+												</a>
 											</li>
 										</ul>
 									</div>
@@ -155,7 +154,7 @@
 				<!--start of image-area -->
 				<div class="col-12 mx-md-auto col-lg-6 text-center " data-tilt>
 					<div class="hero-image-area mb-5 mb-lg-0">
-						<div class="hero-img-wraper"><img class="img-fluid w-50 mt-5" src="assets/images/hero/New Model.png"
+						<div class="hero-img-wraper"><img class="img-fluid w-50 mt-5" src="assets/images/hero/assistant-home.png"
 								alt="" draggable="false"></div>
 					</div>
 					<div class="col-10 ">
@@ -166,13 +165,22 @@
 
 					<div class="askContainer">
 						<div class="askflex-container">
-							<input type="text" id="question" placeholder="Enter your question..." />
-							<button id="ask">
-								Ask
-							</button>
+							<input type="text" id="question" placeholder="Enter your question..." aria-label="chatbot">
+							<button id="ask" aria-label="Submit question">Ask</button> 
+							<div id="mic-container">
+								<img id="mic" src="assets/images/mic/mic.svg" alt="Microphone" title="Start speaking">
+								<img id="muteMic" src="assets/images/mic/muteMic.svg" alt="Muted microphone" title="Mute" style="display: none;">
+							</div>
 						</div>
-						<div id="loading-image"></div>
+						<button id="clearResponse">Clear Response</button> <div id="loading-image" style="display: none;">
+							<img src="assets/images/loading.gif" alt="Loading..." />
+						</div>
 						<div id="response"></div>
+						<div class="speech-control">
+							<div id="speaker-container"></div>
+							<select style="display: none;" aria-label="Speech options"></select> 
+						</div>    
+					</div>				  
 					</div>
 				</div>
 			</div>
@@ -201,10 +209,9 @@
 						<div class="service-icon"><i class="flaticon-web-development font-icon"></i></div><span
 							class="service-num hollow-text">1 </span>
 						<div class="service-content">
-							<h3 class="service-title">Tailored Content Suggestions</h3>
-							<p class="service-text">
-
-							</p>
+							<h3 class="service-title">AI-Powered Content Generation</h3>
+							<p class="service-text"></p>
+							<a class="read-more" href="./services/service1.html">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div><a class="read-more" href="#0"><i class=> </i></a>
 					</div>
 					<!-- End First service box   -->
@@ -215,7 +222,8 @@
 						<div class="service-icon"><i class="flaticon-nanotechnology font-icon"></i></div><span
 							class="service-num hollow-text">2 </span>
 						<div class="service-content">
-							<h3 class="service-title">Streamlined Scheduling and Publishing</h3>
+							<h3 class="service-title">Social Media  &nbsp; Management</h3>
+							<a class="read-more" href="./services/service2.html">read more<i class="bi bi-arrow-right icon "> </i></a>
 							<p class="service-text">
 
 							</p>
@@ -229,7 +237,8 @@
 						<div class="service-icon"><i class="flaticon-web-domain font-icon"></i></div><span
 							class="service-num hollow-text">3 </span>
 						<div class="service-content">
-							<h3 class="service-title">In-depth Engagement Analytics</h3>
+							<h3 class="service-title">Community Engagement and Growth</h3>
+							<a class="read-more" href="./services/service3.html">read more<i class="bi bi-arrow-right icon "> </i></a>
 							<p class="service-text">
 
 							</p>
@@ -243,7 +252,8 @@
 						<div class="service-icon"><i class="flaticon-profile font-icon"></i></div><span
 							class="service-num hollow-text">4 </span>
 						<div class="service-content">
-							<h3 class="service-title">Viewer Data</h3>
+							<h3 class="service-title">Advanced AI Features</h3>
+							<a class="read-more" href="./services/service4.html">read more<i class="bi bi-arrow-right icon "> </i></a>
 							<p class="service-text">
 
 							</p>
@@ -257,7 +267,8 @@
 						<div class="service-icon"><i class="flaticon-search font-icon"></i></div><span
 							class="service-num hollow-text">5 </span>
 						<div class="service-content">
-							<h3 class="service-title">Intelligent Automation</h3>
+							<h3 class="service-title">Monetization Strategies</h3>
+							<a class="read-more" href="./services/service5.html">read more<i class="bi bi-arrow-right icon "> </i></a>
 							<p class="service-text">
 
 							</p>
@@ -271,7 +282,8 @@
 						<div class="service-icon"><i class="flaticon-strategy font-icon"></i></div><span
 							class="service-num hollow-text">6 </span>
 						<div class="service-content">
-							<h3 class="service-title">Emotion Analysis</h3>
+							<h3 class="service-title">Advanced Search & Discovery</h3>
+							<a class="read-more" href="./services/service6.html">read more<i class="bi bi-arrow-right icon "> </i></a>
 							<p class="service-text">
 
 							</p>
@@ -470,7 +482,7 @@
 										Time.</span></li>
 							</ul>
 						</div>
-						<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">Find Out More</a></div>
+						<div class="plan-cta"><a class="cta-btn btn-outline " href="./selectplan.html">Find Out More</a></div>
 					</div>
 				</div>
 				<!--Second-plan-->
@@ -493,7 +505,7 @@
 										Can Access At A Lower Price.</span></li>
 							</ul>
 						</div>
-						<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">Find Out More</a></div>
+						<div class="plan-cta"><a class="cta-btn btn-outline " href="./selectplan.html">Find Out More</a></div>
 					</div>
 				</div>
 				<!--Third-plan-->
@@ -514,7 +526,7 @@
 
 							</ul>
 						</div>
-						<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">Find Out More</a></div>
+						<div class="plan-cta"><a class="cta-btn btn-outline " href="./selectplan.html">Find Out More</a></div>
 					</div>
 				</div>
 			</div>
@@ -631,8 +643,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-5 align-self-center">
-					<div class="faq-img start-dir-img-frame wow fadeIn" data-wow-delay="0.2s"><img class="img-fluid"
-							loading="lazy" src="assets/images/faq/FAQ Prompt.png" alt=""></div>
+					<div class="faq-img start-dir-img-frame wow fadeIn" data-wow-delay="0.2s"><img class="img-faq"
+							loading="lazy" src="assets/images/faq/FAQ Prompt.jpeg" alt=""></div>
 				</div>
 				<div class="col-12 col-lg-7 ">
 					<div class="sec-heading  ">
@@ -889,7 +901,7 @@
 	<!-- End  blog Section-->
 	<!-- Start  page-footer Section-->
 	<footer class="page-footer dark-color-footer" id="page-footer">
-		<div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/footer-bg-1.jpg"
+		<div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/triangles.png"
 			data-bg-opacity=".25"></div>
 		<div class="container">
 			<div class="row footer-cols">
@@ -941,7 +953,7 @@
 					<div class="footer-col-content-wrapper">
 						<ul class="footer-menu">
 							<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="sc-link"
-									href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a>
+									href="https://www.facebook.com/share/1H5x816C1b/" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a>
 							</li>
 							</li>
 							<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="sc-link"
@@ -981,11 +993,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 d-flex justify-content-start">
-						<p class="credits">
-							&copy; 2023
-							All rights reserved to
-							<a class="link" href="#0">AI2BC - SociAI Connect</a>
-						</p>
+						<span class="nowrap">Copyright &copy; <time id="year"></time><a class="link" href="#0"> AI2BC </a></span> 
 					</div>
 					<div class="col-12 col-md-6 d-flex justify-content-end">
 						<div class="terms-links"><a href="#0">Terms of Use </a>
@@ -1026,6 +1034,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="js/askMe.js"></script>
 	<script src="js/video.js"></script>
+
+		<!--for chatbot -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="js/askMe.js"></script>
+		<!-- For img gen -->
+		<script src="js/Teacher.js"></script>
+		<script src="js/GenImage.js"></script>
+		<script src="sendText.js"></script>
 
 </body>
 

@@ -1636,13 +1636,13 @@ body.rounded-btns .read-more {
   left: -12px;
   width: 6px;
   aspect-ratio: 1/1;
-  background: var(--clr-main);
+  background: var(--clr-white);
   scale: 0;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 }
 .header-basic .has-sub-menu > .sub-menu .active.sub-menu-link, .header-basic .active.menu-link, .header-basic .has-sub-menu > .sub-menu .sub-menu-link:hover, .header-basic .menu-link:hover {
-  color: var(--clr-main);
+  color: var(--clr-white);
 }
 .header-basic .has-sub-menu > .sub-menu .active.sub-menu-link::before, .header-basic .active.menu-link::before, .header-basic .has-sub-menu > .sub-menu .sub-menu-link:hover::before, .header-basic .menu-link:hover::before {
   scale: 1;
@@ -1668,6 +1668,7 @@ body.rounded-btns .read-more {
   left: 0;
   z-index: 1030;
   border-bottom: 1px solid transparent;
+  background-color: var(--clr-main);
 }
 .is-sticky.header-basic {
   background-color: var(--clr-main);

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Added Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Raleway", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f9f9f9, #cbeffd);
+      background-attachment: fixed;
+      font-optical-sizing: auto;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .service-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      background-color: #fff;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 20px rgba(23, 170, 202, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    #back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      color: #555;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    #back-button i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+
+    #back-button:hover {
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+    <div class="header">
+      <h1>Services</h1>
+      <p>Explore the services we offer to meet your needs</p>
+    </div>
+    <div class="container">
+        <div id="back-button">
+            <i class="fas fa-arrow-left"></i> Back
+        </div>
+      <div class="service-card">
+        <h2 class="service-title">AI-Powered Content Generation</h2>
+        <p class="service-description">
+          <li>Text Generation: Generate engaging social media posts, captions, blog post ideas, scripts, and even articles.</li>
+          <li>Image Generation/Enhancement: Create unique visuals or enhance existing ones using AI image tools.</li>
+          <li>Video Generation/Enhancement: Produce short video clips, add music or effects, and even generate animations.</li>
+        </p>
+      </div>
+      <div class="service-card">
+        <h2 class="service-title">Social Media Management</h2>
+        <p class="service-description">
+          <li>Automated Posting and Scheduling: Allow users to plan and schedule their content across multiple platforms in advance.</li>
+          <li>Performance Analysis and Reporting: Provide AI-driven insights into post performance, audience engagement, and trends.</li>
+          <li>Hashtag and Keyword Optimization: Suggest relevant hashtags and keywords to maximize content reach and visibility.</li>
+          <li>Social Listening Tools: Monitor conversations and mentions related to specific keywords or brands.</li>
+        </p>
+      </div>
+    <div class="service-card">
+      <h2 class="service-title">Community Engagement and Growth</h2>
+      <p class="service-description">
+        <li>Automated Response and Chatbots: Develop AI-powered chatbots to, provide customer support, and engage with followers.</li>
+        <li>Personalized Recommendations: Suggest relevant connections, content, or groups to users based on their interests and interactions.</li>
+        <li>Sentiment Analysis: Analyze audience sentiment towards brands or topics to understand public opinion and adjust social media strategies.</li>
+      </p>
+    </div>
+    <div class="service-card">
+      <h2 class="service-title">Advanced AI Features</h2>
+      <p class="service-description">
+        <li>Predictive Analytics: Forecast the performance of social media content before it's posted, helping users optimize for maximum impact.</li>
+        <li>Trend Identification: Identify emerging trends and popular topics in real-time, giving users a competitive edge.</li>
+        <li>Hyper-Personalization: Tailor content and recommendations to individual users based on their unique preferences and behaviors.</li>
+      </p>
+    </div>
+    <div class="service-card">
+      <h2 class="service-title">Monetization Strategies</h2>
+      <p class="service-description">
+        <li>Subscription Plans: Offer tiered access to different features and usage limits.</li>
+        <li>API Access: Allow developers to integrate your AI capabilities into their own applications.</li>
+        <li>Affiliate Marketing: Partner with relevant businesses to promote their products or services.</li>
+      </p>
+    </div>
+    <div class="service-card">
+      <h2 class="service-title">Advanced Search & Discovery</h2>
+      <p class="service-description">
+        <li>Semantic Search: Allow users to search for content based on meaning and context, using natural language queries.</li>
+        <li>Trend Prediction: Use AI to identify emerging trends and topics within the app, giving users insights into what's popular and relevant.</li>
+        <li>Personalized Recommendations of People: Suggest accounts to follow based on in-depth analysis of user interests,connections and interactions.</li>
+      </p>
+    </div>
+  </div>
+  <script>
+    // Back Button Functionality
+    document.getElementById('back-button').addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>

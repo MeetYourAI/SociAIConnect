@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Raleway", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e3f2fd, #c8e6c9);
+      font-optical-sizing: auto;
+    }
+
+    .header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 20px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    .service-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-title {
+      font-size: 1.8rem;
+      color: #007bff;
+      display: flex;
+      align-items: center;
+    }
+
+    .service-title i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #28a745;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    .service-description li {
+      margin-bottom: 10px;
+    }
+
+    .service-description li i {
+      color: #007bff;
+      margin-right: 8px;
+    }
+
+    #back-button {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+      color: #007bff;
+      font-size: 20px;
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #back-button i {
+      margin-right: 8px;
+    }
+
+    #back-button:hover {
+      background-color: #007bff;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Our Services</h1>
+    <p>Explore the services we offer to meet your needs</p>
+  </div>
+  <div id="back-button">
+    <i class="fas fa-arrow-left"></i> Back
+  </div>
+  <div class="container">
+    <div class="service-card">
+      <h2 class="service-title">
+        <i class="fas fa-brain"></i> Advanced AI Features
+      </h2>
+      <p class="service-description">
+        <ul>
+          <li><i class="fas fa-chart-line"></i> <strong>Predictive Analytics:</strong> Forecast the performance of social media content before it's posted, helping users optimize for maximum impact.</li>
+          <li><i class="fas fa-bolt"></i> <strong>Trend Identification:</strong> Identify emerging trends and popular topics in real-time, giving users a competitive edge.</li>
+          <li><i class="fas fa-user-cog"></i> <strong>Hyper-Personalization:</strong> Tailor content and recommendations to individual users based on their unique preferences and behaviors.</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  <script>
+    // Back Button Functionality
+    document.getElementById('back-button').addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>

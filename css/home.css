@@ -41,3 +41,132 @@
 #response {
     margin-top: 1.5rem;
 }
+
+.hero-img-wraper {
+    display: inline-block; /* Or block, if the wrapper takes full width */
+    position: relative; 
+  }
+  
+
+.sc-icon { /* Or target the image more specifically if needed */
+    width: 20px; /* Adjust the size as needed */
+    height: auto; 
+    filter: brightness(0) invert(1); 
+  }
+
+.img-faq {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20%;
+}  
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .read-more i {
+    margin-left: 5px;
+  }
+
+  .read-more:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 0 10px 2px #007bff;
+  }
+
+  .askContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .askflex-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  #question {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  #question:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  #ask {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #ask:hover {
+    background-color: #0056b3;
+  }
+  
+  #mic-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  #mic, #muteMic {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  #mic:hover, #muteMic:hover {
+    transform: scale(1.2);
+  }
+  
+  #loading-image img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #response {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eef5ff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .speech-control {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

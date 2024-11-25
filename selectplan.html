@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page with Single Plan Selection</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6); /* Gradient Background */
+      color: #333;
+    }
+
+    #cart-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      color: #555;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #cart-count {
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      padding: 2px 6px;
+      position: absolute;
+      top: -5px;
+      right: -10px;
+    }
+
+    .modal-header,
+    .modal-footer {
+      background-color: #f8f9fa;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(255, 252, 252, 0.831);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      color: #666;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+
+    .container {
+      padding-top: 30px;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    #back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  #back-button i {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+
+  #back-button:hover {
+    color: #007bff;
+  }
+  </style>
+</head>
+<body>
+  <div id="back-button">
+    <i class="fas fa-arrow-left"></i> Back
+  </div>
+  <div id="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Select Your Plan</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Open Plan</h5>
+                <p class="card-text">Features:</p>
+                <ul>
+                  <li>Limited AI Chat</li>
+                  <li>Text-based AI Generation</li>
+                </ul>
+                <p class="card-text"><small class="text-muted"><b>Price: Free Trial</b></small></p>
+                <button class="btn btn-primary add-to-cart" data-plan="Open Plan" data-price="0">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Tailored Plan</h5>
+                <p class="card-text">Features:</p>
+                <ul>
+                  <li>All Basic features</li>
+                  <li>Tailor Your AI Helper To Your Preferences.</li>
+                </ul>
+                <p class="card-text"><small class="text-muted"><b>Price: $25/month</b></small></p>
+                <button class="btn btn-primary add-to-cart" data-plan="Tailored Plan" data-price="25">Add to
+                  Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Custom Plan</h5>
+                <p class="card-text">Features:</p>
+                <ul>
+                  <li>All Premium features</li>
+                  <li>Personalized AI Generators</li>
+                  <li>Content Collaboration Tools</li>
+                </ul>
+                <p class="card-text"><small class="text-muted"><b>Price: $30/month</b></small></p>
+                <button class="btn btn-primary add-to-cart" data-plan="Custom Plan" data-price="30">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="cart-modal-title"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cart-modal-title">Your Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="cart-content">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Back Button Functionality
+    document.getElementById('back-button').addEventListener('click', () => {
+      window.history.back();
+    });
+    let cart = null;
+
+    const cartIcon = document.getElementById('cart-icon');
+    const cartCount = document.getElementById('cart-count');
+    const cartContent = document.getElementById('cart-content');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    // Add to cart functionality
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const plan = button.dataset.plan;
+        const price = parseFloat(button.dataset.price);
+
+        // Allow only one plan, and save to localStorage
+        cart = {plan, price};
+        localStorage.setItem('selectedPlan', JSON.stringify(cart));
+
+        updateCartCount();
+        updateCartContent(); // Update cart content immediately
+      });
+    });
+
+    // Update cart count
+    function updateCartCount() {
+      cartCount.textContent = cart ? 1 : 0;
+    }
+
+    // Show cart in modal
+    cartIcon.addEventListener('click', () => {
+      updateCartContent();
+      $('#cart-modal').modal('show');
+    });
+
+    // Update cart content in modal
+    function updateCartContent() {
+      cartContent.innerHTML = '';
+      const storedCart = JSON.parse(localStorage.getItem('selectedPlan'));
+
+      if (!storedCart) {
+        cartContent.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+      }
+
+      cartContent.innerHTML = `
+        <p><strong>${storedCart.plan}</strong> - $${storedCart.price.toFixed(2)}</p>
+        <p><strong>Total: $${storedCart.price.toFixed(2)}</strong></p>
+        <button type="button" class="btn btn-danger btn-sm remove-from-cart">Remove</button>
+      `;
+
+      // Add event listener to the remove button
+      const removeBtn = document.querySelector('.remove-from-cart');
+      removeBtn.addEventListener('click', () => {
+        cart = null;
+        localStorage.removeItem('selectedPlan');
+        updateCartCount();
+        updateCartContent();
+      });
+    }
+
+    // Proceed to checkout
+    checkoutBtn.addEventListener('click', () => {
+      if (!cart) return;
+      window.location.href = 'payment.html';
+    });
+
+    // Initialize cart UI
+    updateCartCount();
+  </script>
+</body>
+</html>

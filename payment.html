@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+            padding-top: 50px;
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .card-footer {
+            background-color: #f8f9fa;
+            border-radius: 0 0 12px 12px;
+            text-align: center;
+        }
+
+        .nav-pills .nav-link {
+            color: #007bff;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .input-group-text {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .tab-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .payment-summary {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-summary p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .payment-summary .plan-info {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .payment-summary .btn {
+            margin-top: 20px;
+        }
+
+        .payment-summary .btn-block {
+            border-radius: 30px;
+        }
+
+        #back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        color: #555;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        }
+
+        #back-button i {
+        margin-right: 8px;
+        font-size: 20px;
+        }
+
+        #back-button:hover {
+        color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div id="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Complete Your Payment</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#credit-card" class="nav-link active">
+                                    <i class="fas fa-credit-card mr-2"></i> Credit Card
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#debit-card" class="nav-link">
+                                    <i class="fas fa-credit-card mr-2"></i> Debit Card
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#paypal" class="nav-link">
+                                    <i class="fab fa-paypal mr-2"></i> Paypal
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#net-banking" class="nav-link">
+                                    <i class="fas fa-mobile-alt mr-2"></i> Net Banking
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="credit-card" class="tab-pane fade show active pt-3">
+                                <form role="form" action="your-payment-processing-script.php" method="post">
+                                    <div class="form-group">
+                                        <label for="username"><h6>Card Owner</h6></label>
+                                        <input type="text" id="username" name="username" placeholder="Card Owner Name"
+                                            required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardNumber"><h6>Card number</h6></label>
+                                        <div class="input-group">
+                                            <input type="text" id="cardNumber" name="cardNumber"
+                                                placeholder="Valid card number" class="form-control" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text text-muted">
+                                                    <i class="fab fa-cc-visa mx-1"></i>
+                                                    <i class="fab fa-cc-mastercard mx-1"></i>
+                                                    <i class="fab fa-cc-amex mx-1"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label><h6>Expiration Date</h6></label>
+                                                <div class="input-group">
+                                                    <input type="number" placeholder="MM" name="expiryMonth"
+                                                        class="form-control" required>
+                                                    <input type="number" placeholder="YY" name="expiryYear"
+                                                        class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4">
+                                                <label data-toggle="tooltip"
+                                                    title="Three digit CV code on the back of your card">
+                                                    <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label>
+                                                <input type="text" name="cvv" required class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="debit-card" class="tab-pane fade pt-3">
+                                <form role="form" action="your-payment-processing-script.php" method="post">
+                                    <div class="form-group">
+                                        <label for="debit-owner"><h6>Card Owner</h6></label>
+                                        <input type="text" id="debit-owner" name="debit-owner"
+                                            placeholder="Card Owner Name" required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="debit-card-number"><h6>Card number</h6></label>
+                                        <div class="input-group">
+                                            <input type="text" id="debit-card-number" name="debit-card-number"
+                                                placeholder="Valid card number" class="form-control" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text text-muted">
+                                                    <i class="fab fa-cc-visa mx-1"></i>
+                                                    <i class="fab fa-cc-mastercard mx-1"></i>
+                                                    <i class="fab fa-cc-amex mx-1"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label><h6>Expiration Date</h6></label>
+                                                <div class="input-group">
+                                                    <input type="number" placeholder="MM" name="debit-expiry-month"
+                                                        class="form-control" required>
+                                                    <input type="number" placeholder="YY" name="debit-expiry-year"
+                                                        class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4">
+                                                <label data-toggle="tooltip"
+                                                    title="Three digit CV code on the back of your card">
+                                                    <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label>
+                                                <input type="text" name="debit-cvv" required class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="paypal" class="tab-pane fade pt-3">
+                                <h6 class="pb-2">Select your paypal account type</h6>
+                                <div class="form-group">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" checked> Domestic
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="optradio" class="ml-5"> International
+                                    </label>
+                                </div>
+                                <p>
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fab fa-paypal mr-2"></i> Log into my Paypal
+                                    </button>
+                                </p>
+                                <p class="text-muted">Note: After clicking on the button, you will be directed to a
+                                    secure gateway for payment. After completing the payment process, you will be
+                                    redirected back to the website to view details of your order.</p>
+                            </div>
+
+                            <div id="net-banking" class="tab-pane fade pt-3">
+                                <div class="form-group">
+                                    <label for="Select Your Bank">
+                                        <h6>Select your Bank</h6>
+                                    </label>
+                                    <select class="form-control" id="ccmonth">
+                                        <option value="" selected disabled>--Please select your Bank--</option>
+                                        <option>Bank 1</option>
+                                        <option>Bank 2</option>
+                                        <option>Bank 3</option>
+                                        <option>Bank 4</option>
+                                        <option>Bank 5</option>
+                                        <option>Bank 6</option>
+                                        <option>Bank 7</option>
+                                        <option>Bank 8</option>
+                                        <option>Bank 9</option>
+                                        <option>Bank 10</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="fas fa-mobile-alt mr-2"></i> Proceed Payment
+                                        </button>
+                                    </p>
+                                </div>
+                                <p class="text-muted">Note: After clicking on the button, you will be directed to a
+                                    secure gateway for payment. After completing the payment process, you will be
+                                    redirected back to the website to view details of your order.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer payment-summary">
+                        <div id="payment-summary">
+                            <p>Loading your selected plan...</p>
+                            <div class="plan-info">
+                                <label for="planAmount"><h6>Total Amount</h6></label>
+                                <input type="text" id="planAmount" name="planAmount" class="form-control" disabled>
+                            </div>
+                            <button type="submit" class="btn btn-block">Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Back Button Functionality
+        document.getElementById('back-button').addEventListener('click', () => {
+        window.history.back();
+        });
+        
+        // Retrieve the selected plan from localStorage
+        const selectedPlan = JSON.parse(localStorage.getItem('selectedPlan'));
+
+        if (!selectedPlan) {
+            document.getElementById('payment-summary').innerHTML = '<p>No plan selected. Please go back and choose a plan.</p>';
+        } else {
+            // Display the selected plan's information
+            document.getElementById('payment-summary').innerHTML = `
+                <p><strong>${selectedPlan.plan}</strong> - $${selectedPlan.price.toFixed(2)}</p>
+            `;
+            document.getElementById('planAmount').value = `$${selectedPlan.price.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

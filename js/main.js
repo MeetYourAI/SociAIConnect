@@ -722,3 +722,9 @@ $(function () {
     End Vendors plugins options Area 
      ******************************** */
 });
+
+//Update copyright date automatically with server time
+const year = document.getElementById("year")
+const thisYear = new Date().getFullYear()
+year.setAttribute("datetime", thisYear)
+year.textContent = thisYear
